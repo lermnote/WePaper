@@ -1,0 +1,13 @@
+/* pages/post/post.wxss */
+@import "../../wxParse/wxParse.wxss";
+.weui-article__line{
+  width: 100%;
+  padding-bottom: 30rpx;
+  border-top: 1px solid #ccc ;
+}
+.weui-footer__line{
+  display: inline-block;
+  width: 8%;
+  border-top: 1px solid #ccc ;
+  vertical-align: 4px;
+}

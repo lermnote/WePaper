@@ -1,0 +1,13 @@
+/**index.wxss**/
+.paper-title {
+  padding-left: 20rpx;
+  border-left: 5rpx solid #ae000a;
+  color: #ae000a;
+  font-size: 14pt
+}
+.paper-cell {
+  position: fixed;
+  bottom: 0.52em;
+  right: 10rpx;
+
+}

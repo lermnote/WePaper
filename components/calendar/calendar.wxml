@@ -1,0 +1,26 @@
+<!--components/calender/calender.wxml-->
+<button class="weui-btn mini-btn" type="primary" size="mini" hover-class="weui-cell_active" catchtap='showModalBtn'>
+{{day}}日
+</button>
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" hidden="{{showModal}}"></view>
+<view class='calender modal-dialog' hidden="{{showModal}}">
+  <view class='year'>
+    <text bindtap='reduce'>{{"<"}}</text>
+    <text>{{showDate}}</text>
+    <text bindtap="add">{{">"}}</text>
+  </view>
+  <view class='week'>
+    <block wx:for="{{week}}" wx:key="{{index}}">
+      <text>{{item}}</text>
+    </block>
+  </view>
+  <view class='date'>
+    <block wx:for="{{monthFirstDay}}" wx:key="item">
+      <text></text>
+    </block>
+    <block wx:for="{{dayCount}}" wx:key="item">
+      <text class="{{tapThis==index?'tapthis':''}}" catchtap="chooseDate" data-index="{{index}}" data-value="{{item}}">{{item}}</text>
+    </block>
+  </view>
+  <!-- <slot></slot> -->
+</view>

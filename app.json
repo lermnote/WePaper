@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/paper/paper",
+    "pages/index/index",
+    "pages/post/post",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ae000a",
+    "navigationBarTitleText": "酒钢日报",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/paper/paper",
+        "iconPath": "images/tar-home.png",
+        "selectedIconPath": "images/tar-home-on.png",
+        "text": "版面"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tar-topic.png",
+        "selectedIconPath": "images/tar-topic-on.png",
+        "text": "目录",
+        "backgroundColor": "#000"
+      }
+    ],
+    "selectedColor": "#589ad5"
+  },
+  "debug": true
+}

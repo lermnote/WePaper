@@ -1,0 +1,12 @@
+<view class="page-container">
+  <view class="paper-container">
+    <swiper class='paper-swiper' style='width:{{windowWidth*2}}rpx;height:{{windowHeight*2}}rpx;' indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="{{indicatorActiveColor}}">
+      <block wx:for="{{allPaper}}" wx:key="*this">
+        <swiper-item>
+          <image style='width:{{windowWidth*2}}rpx;height:{{windowHeight*2}}rpx;' src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <calendar id="calendar"  bind:onchangedate="chooseDate" class="paper-cell"></calendar>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+/* pages/paper/paper.wxss */
+
+.paper-cell {
+  position: fixed;
+  bottom: 0.52em;
+  right: 10rpx;
+
+}

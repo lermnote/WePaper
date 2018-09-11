@@ -1,0 +1,26 @@
+<!--pages/post/post.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-article">
+      <view class="weui-article__h1">{{title}}</view>
+      <view class="weui-article__p">{{date}}</view>
+      <view class="weui-article__line"></view>
+      <view class="weui-article__p">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+      </view>
+      <view class="weui-article__p">
+        <block wx:for="{{imgArray}}" wx:key="*that" wx:for-index="idx">
+          <template is="wxParse" data="{{wxParseData:item}}" />
+        </block>
+      </view>
+    </view>
+    <view class="weui-footer">
+      <view class="weui-footer__text page__ft">
+        <view class="weui-footer__line"></view>
+        已显示全部内容
+        <view class="weui-footer__line"></view>
+      </view>
+    </view>
+  </view>
+</view>

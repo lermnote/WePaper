@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view>
+  <block wx:for="{{showData}}" wx:key="id" wx:for-item="item" wx:for-index="idx">
+    <view class="section">
+      <view class="weui-cells__title">
+        <text class="paper-title">{{pageInfo[idx].title}}</text>
+      </view>
+      <view class="containera">
+        <view class="weui-cells weui-cells_after-title">
+          <block class="weui-cells" wx:for="{{item}}" wx:key="id" wx:for-item="item" wx:for-index="id">
+            <navigator url="../post/post?url={{item.url}}&title={{item.title}}&date={{chooseDate}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+              <view class="weui-cell__bd">{{item.title}}</view>
+              <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+          </block>
+        </view>
+      </view>
+    </view>
+  </block>
+  <calendar id="calendar" bind:onchangedate="chooseDate" class="paper-cell"></calendar>
+</view>
