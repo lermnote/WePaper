@@ -1,7 +1,6 @@
 // pages/paper/paper.js
 const app = getApp();
-const urlRequest = require('../../utils/util.js').urlRequest
-const todayDateArray = require('../../utils/util.js').todayDateArray
+import { urlRequest } from '../../utils/util.js';
 
 Page({
   /**
@@ -50,7 +49,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function () {
     var that = this;
     if (app.globalData.systemInfo) {
       var systemInfo = app.globalData.systemInfo; //获取设备窗口宽高

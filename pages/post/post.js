@@ -1,7 +1,7 @@
 // pages/post/post.js
 var app = getApp();
-var WxParse = require('../../wxParse/wxParse.js');
-var todayDateArray = require('../../utils/util.js').todayDateArray;
+import { wxParse, wxParseTemArray } from '../../wxParse/wxParse.js';
+import { todayDateArray } from '../../utils/util.js';
 Page({
   data: {},
   onLoad: function (options) {
@@ -24,7 +24,7 @@ Page({
         let html = res.data;
         let postReg = /<founder-content>([\s\S]*?)<\/founder-content>/i; //post content
         let postMatch = html.match(postReg);
-        WxParse.wxParse('article', 'html', postMatch[1], that, 5);
+        wxParse('article', 'html', postMatch[1], that, 5);
         let imgReg = /<img\s+src="([^"]*)brief\.jpg">/gi; //post image 
         let imgMatch = html.match(imgReg);
         let subStr = /..\/..\/../i;
@@ -33,9 +33,9 @@ Page({
           for (let i = 0; i < imgMatch.length; i++) {
             let result = imgMatch[i].replace(subStr, app.globalData.url);
             imgArray.push(result);
-            WxParse.wxParse('image' + i, 'html', result, that, 5)
+            wxParse('image' + i, 'html', result, that, 5)
             if (i === imgMatch.length - 1) {
-              WxParse.wxParseTemArray("imgArray", 'image', imgMatch.length, that)
+              wxParseTemArray("imgArray", 'image', imgMatch.length, that)
             }
           }
         }

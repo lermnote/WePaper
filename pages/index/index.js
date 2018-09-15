@@ -1,7 +1,7 @@
 // pages/paper/paper.js
 var app = getApp();
-var todayDateArray = require('../../utils/util.js').todayDateArray
-const urlRequest = require('../../utils/util.js').urlRequest
+import { todayDateArray } from '../../utils/util.js';
+import { urlRequest } from '../../utils/util.js';
 const apiUrl = app.globalData.url + '/html' //接口地址
 Page({
   data: {

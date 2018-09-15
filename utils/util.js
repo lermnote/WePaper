@@ -57,8 +57,6 @@ const urlRequest = date => {
     })
   })
 }
-module.exports = {
-  formatTime: formatTime,
-  urlRequest: urlRequest,
-  todayDateArray: todayDateArray,
-}
+export const formatTime = formatTime;
+export const urlRequest = urlRequest;
+export const todayDateArray = todayDateArray;
