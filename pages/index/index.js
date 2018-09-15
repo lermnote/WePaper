@@ -1,5 +1,5 @@
 // pages/paper/paper.js
-var app = getApp();
+const app = getApp();
 import { todayDateArray } from '../../utils/util.js';
 import { urlRequest } from '../../utils/util.js';
 const apiUrl = app.globalData.url + '/html' //接口地址
